@@ -1,0 +1,19 @@
+# Службові файли Maven
+target/
+**/target/
+
+# Службові файли IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Журнали та локальні конфігурації
+*.log
+*.env
+local.properties
+
+# Системні файли ОС
+.DS_Store
+Thumbs.db
