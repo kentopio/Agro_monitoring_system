@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="4.0">
+    <servlet>
+        <servlet-name>FieldServlet</servlet-name>
+        <servlet-class>com.agro.servlet.FieldServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FieldServlet</servlet-name>
+        <url-pattern>/fields</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ObservationServlet</servlet-name>
+        <servlet-class>com.agro.servlet.ObservationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ObservationServlet</servlet-name>
+        <url-pattern>/observations</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ProblemServlet</servlet-name>
+        <servlet-class>com.agro.servlet.ProblemServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProblemServlet</servlet-name>
+        <url-pattern>/problems</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>TreatmentServlet</servlet-name>
+        <servlet-class>com.agro.servlet.TreatmentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TreatmentServlet</servlet-name>
+        <url-pattern>/treatments</url-pattern>
+    </servlet-mapping>
+</web-app>

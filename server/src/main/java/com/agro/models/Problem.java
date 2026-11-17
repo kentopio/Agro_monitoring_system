@@ -23,29 +23,25 @@ public class Problem {
         this.f3Sensitivity = f3Sensitivity;
     }
 
-    // Розрахунок інтегрального показника I = 0.40*F1 + 0.35*F2 + 0.25*F3
     public double calculateIntegralIndicator() {
         return (0.40 * f1InfectedArea) + (0.35 * f2Severity) + (0.25 * f3Sensitivity);
     }
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
-
     public int getObservationId() { return observationId; }
     public void setObservationId(int observationId) { this.observationId = observationId; }
-
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
-
     public ProblemStatus getStatus() { return status; }
     public void setStatus(ProblemStatus status) { this.status = status; }
-
     public int getF1InfectedArea() { return f1InfectedArea; }
     public void setF1InfectedArea(int f1InfectedArea) { this.f1InfectedArea = f1InfectedArea; }
-
     public int getF2Severity() { return f2Severity; }
     public void setF2Severity(int f2Severity) { this.f2Severity = f2Severity; }
-
     public int getF3Sensitivity() { return f3Sensitivity; }
     public void setF3Sensitivity(int f3Sensitivity) { this.f3Sensitivity = f3Sensitivity; }
+    public double getIntegralIndicator() {
+        return calculateIntegralIndicator();
+    }
 }
