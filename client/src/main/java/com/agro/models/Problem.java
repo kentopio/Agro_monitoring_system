@@ -1,5 +1,8 @@
 package com.agro.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Problem {
     private int id;
     private int observationId;
@@ -8,6 +11,7 @@ public class Problem {
     private int f1InfectedArea;
     private int f2Severity;
     private int f3Sensitivity;
+    private double integralIndicator;
     public Problem() {
     }
     public Problem(int id, int observationId, String description, ProblemStatus status,
@@ -20,9 +24,7 @@ public class Problem {
         this.f2Severity = f2Severity;
         this.f3Sensitivity = f3Sensitivity;
     }
-    public double calculateIntegralIndicator() {
-        return (0.40 * f1InfectedArea) + (0.35 * f2Severity) + (0.25 * f3Sensitivity);
-    }
+
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public int getObservationId() { return observationId; }
@@ -37,4 +39,6 @@ public class Problem {
     public void setF2Severity(int f2Severity) { this.f2Severity = f2Severity; }
     public int getF3Sensitivity() { return f3Sensitivity; }
     public void setF3Sensitivity(int f3Sensitivity) { this.f3Sensitivity = f3Sensitivity; }
+    public double getIntegralIndicator() { return integralIndicator; }
+    public void setIntegralIndicator(double integralIndicator) { this.integralIndicator = integralIndicator; }
 }
