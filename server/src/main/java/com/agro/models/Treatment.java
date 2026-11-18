@@ -22,16 +22,12 @@ public class Treatment {
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
-
     public int getProblemId() { return problemId; }
     public void setProblemId(int problemId) { this.problemId = problemId; }
-
     public String getTreatmentName() { return treatmentName; }
     public void setTreatmentName(String treatmentName) { this.treatmentName = treatmentName; }
-
     public LocalDate getPlannedDate() { return plannedDate; }
     public void setPlannedDate(LocalDate plannedDate) { this.plannedDate = plannedDate; }
-
     public boolean isCompleted() { return isCompleted; }
     public void setCompleted(boolean completed) { isCompleted = completed; }
 }

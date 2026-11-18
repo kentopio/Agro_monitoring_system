@@ -17,7 +17,6 @@ public class TreatmentDao {
             stmt.setDate(3, Date.valueOf(treatment.getPlannedDate()));
             stmt.setBoolean(4, treatment.isCompleted());
             stmt.executeUpdate();
-
             try (ResultSet keys = stmt.getGeneratedKeys()) {
                 if (keys.next()) {
                     treatment.setId(keys.getInt(1));

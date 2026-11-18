@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ObservationDao {
+
     public void create(Observation obs) throws SQLException {
         String sql = "INSERT INTO observations (field_id, observation_date, inspector_name) VALUES (?, ?, ?)";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -22,6 +23,7 @@ public class ObservationDao {
             }
         }
     }
+
     public Observation findById(int id) throws SQLException {
         String sql = "SELECT * FROM observations WHERE id = ?";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -40,6 +42,7 @@ public class ObservationDao {
         }
         return null;
     }
+
     public List<Observation> findAll() throws SQLException {
         List<Observation> list = new ArrayList<>();
         String sql = "SELECT * FROM observations";
@@ -57,6 +60,7 @@ public class ObservationDao {
         }
         return list;
     }
+
     public boolean update(Observation obs) throws SQLException {
         String sql = "UPDATE observations SET field_id = ?, observation_date = ?, inspector_name = ? WHERE id = ?";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -68,6 +72,7 @@ public class ObservationDao {
             return stmt.executeUpdate() > 0;
         }
     }
+
     public boolean delete(int id) throws SQLException {
         String sql = "DELETE FROM observations WHERE id = ?";
         try (Connection conn = DatabaseConnection.getConnection();

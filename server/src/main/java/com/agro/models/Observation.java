@@ -20,13 +20,10 @@ public class Observation {
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
-
     public int getFieldId() { return fieldId; }
     public void setFieldId(int fieldId) { this.fieldId = fieldId; }
-
     public LocalDate getObservationDate() { return observationDate; }
     public void setObservationDate(LocalDate observationDate) { this.observationDate = observationDate; }
-
     public String getInspectorName() { return inspectorName; }
     public void setInspectorName(String inspectorName) { this.inspectorName = inspectorName; }
 }

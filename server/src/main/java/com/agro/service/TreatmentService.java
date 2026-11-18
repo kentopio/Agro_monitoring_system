@@ -61,7 +61,7 @@ public class TreatmentService {
             throw new IllegalArgumentException("Некоректний ID проблеми");
         }
         if (treatment.getTreatmentName() == null || treatment.getTreatmentName().trim().isEmpty()) {
-            LOGGER.log(Level.WARNING, "Помилка валідації: порожня назва заходу обробки");
+            LOGGER.log(Level.WARNING, "Помилка валідації! Порожня назва заходу обробки");
             throw new IllegalArgumentException("Назва заходу обробки є обов'язковою");
         }
         if (treatment.getPlannedDate() == null) {

@@ -64,7 +64,7 @@ public class ObservationService {
             throw new IllegalArgumentException("Дата спостереження є обов'язковою");
         }
         if (obs.getInspectorName() == null || obs.getInspectorName().trim().isEmpty()) {
-            LOGGER.log(Level.WARNING, "Помилка валідації: порожнє ПІБ інспектора");
+            LOGGER.log(Level.WARNING, "Помилка валідації! Порожнє ПІБ інспектора");
             throw new IllegalArgumentException("ПІБ інспектора є обов'язковим полем");
         }
     }

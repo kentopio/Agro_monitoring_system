@@ -48,15 +48,15 @@ public class FieldService {
             throw new IllegalArgumentException("Об'єкт поля не може бути null");
         }
         if (field.getName() == null || field.getName().trim().isEmpty()) {
-            LOGGER.log(Level.WARNING, "Помилка валідації: порожня назва поля");
+            LOGGER.log(Level.WARNING, "Помилка валідації! Порожня назва поля");
             throw new IllegalArgumentException("Назва поля є обов'язковою");
         }
         if (field.getCropType() == null || field.getCropType().trim().isEmpty()) {
-            LOGGER.log(Level.WARNING, "Помилка валідації: порожній тип культури");
+            LOGGER.log(Level.WARNING, "Помилка валідації! Порожній тип культури");
             throw new IllegalArgumentException("Тип сільськогосподарської культури є обов'язковим");
         }
         if (field.getArea() <= 0) {
-            LOGGER.log(Level.WARNING, "Помилка валідації: некоректна площа поля " + field.getArea());
+            LOGGER.log(Level.WARNING, "Помилка валідації! Некоректна площа поля " + field.getArea());
             throw new IllegalArgumentException("Площа поля повинна бути більшою за 0");
         }
     }

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProblemDao {
+
     public void create(Problem problem) throws SQLException {
         String sql = "INSERT INTO problems (observation_id, description, status, f1_infected_area, f2_severity, f3_sensitivity) VALUES (?, ?, ?, ?, ?, ?)";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -26,6 +27,7 @@ public class ProblemDao {
             }
         }
     }
+
     public Problem findById(int id) throws SQLException {
         String sql = "SELECT * FROM problems WHERE id = ?";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -39,6 +41,7 @@ public class ProblemDao {
         }
         return null;
     }
+
     public List<Problem> findAll() throws SQLException {
         List<Problem> list = new ArrayList<>();
         String sql = "SELECT * FROM problems";
@@ -51,6 +54,7 @@ public class ProblemDao {
         }
         return list;
     }
+
     public boolean update(Problem problem) throws SQLException {
         String sql = "UPDATE problems SET observation_id = ?, description = ?, status = ?, f1_infected_area = ?, f2_severity = ?, f3_sensitivity = ? WHERE id = ?";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -65,6 +69,7 @@ public class ProblemDao {
             return stmt.executeUpdate() > 0;
         }
     }
+
     public boolean delete(int id) throws SQLException {
         String sql = "DELETE FROM problems WHERE id = ?";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -73,6 +78,7 @@ public class ProblemDao {
             return stmt.executeUpdate() > 0;
         }
     }
+
     private Problem mapRow(ResultSet rs) throws SQLException {
         return new Problem(
                 rs.getInt("id"),

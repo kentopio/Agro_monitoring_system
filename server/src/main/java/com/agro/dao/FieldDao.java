@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FieldDao {
+
     public void create(Field field) throws SQLException {
         String sql = "INSERT INTO fields (name, crop_type, area) VALUES (?, ?, ?)";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -22,6 +23,7 @@ public class FieldDao {
             }
         }
     }
+
     public Field findById(int id) throws SQLException {
         String sql = "SELECT * FROM fields WHERE id = ?";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -40,6 +42,7 @@ public class FieldDao {
         }
         return null;
     }
+
     public List<Field> findAll() throws SQLException {
         List<Field> fields = new ArrayList<>();
         String sql = "SELECT * FROM fields";
@@ -57,6 +60,7 @@ public class FieldDao {
         }
         return fields;
     }
+
     public boolean update(Field field) throws SQLException {
         String sql = "UPDATE fields SET name = ?, crop_type = ?, area = ? WHERE id = ?";
         try (Connection conn = DatabaseConnection.getConnection();
@@ -68,6 +72,7 @@ public class FieldDao {
             return stmt.executeUpdate() > 0;
         }
     }
+
     public boolean delete(int id) throws SQLException {
         String sql = "DELETE FROM fields WHERE id = ?";
         try (Connection conn = DatabaseConnection.getConnection();

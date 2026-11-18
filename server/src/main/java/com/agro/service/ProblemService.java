@@ -110,7 +110,7 @@ public class ProblemService {
     }
     public void validateFactors(int f1, int f2, int f3) {
         if (f1 < 0 || f1 > 100 || f2 < 0 || f2 > 100 || f3 < 0 || f3 > 100) {
-            LOGGER.log(Level.WARNING, "Фактори виходять за межі діапазону 0..100: F1=" + f1 + ", F2=" + f2 + ", F3=" + f3);
+            LOGGER.log(Level.WARNING, "Фактори виходять за межі діапазону 0-100: F1=" + f1 + ", F2=" + f2 + ", F3=" + f3);
             throw new IllegalArgumentException("Значення факторів F1, F2, F3 повинні бути в діапазоні від 0 до 100");
         }
     }
